@@ -1,15 +1,63 @@
 .cardContainer{
+    max-width:1000px;
+    background-image:linear-gradient(to left ,  #9796f0, #fbc7d4,#ffffff33);
+    border-radius:5px;
+    box-shadow:3px 3px 2px 2px rgba(106, 104, 104, 0.92);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://i.pinimg.com/736x/bf/bb/b0/bfbbb087a26daf918dab88505558698e.jpg");
-    background-size: cover;
-    min-height: 100vh;
 }
 
-.cardDetailsContainer{
-    background-color: rgb(177, 244, 244);
-    /* background-color: rgb(153, 232, 232); */
-    width: 100%;
-}   
+.main-bg{
+    background-image:linear-gradient(to left ,  #9796f0, #fbc7d4,#9796f0);
+
+    background-size:cover;
+    font-family:cursive;
+}
+
+.heading{
+    font-size: 50px;
+    
+}
+
+.para{
+    font-size:30px
+}
+
+.main-container{
+    background-color:transparent;
+    border-radius:10px;
+    /* box-shadow:2px 2px gray; */
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+.image {
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+
+  }
+  
+  .image:hover {
+    transform: scale(0.9);
+    
+  }
+
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:760px) {
+    .cardContainer{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .cardContainer{
+        flex-direction: column;
+    }
+}

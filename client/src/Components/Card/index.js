@@ -18,18 +18,26 @@ const Card = () => {
     fetchData();
   }, []);
   return (
-    <div className="cardContainer container mx-auto p-4">
-      <div className="cardDetailsContainer max-w-md mx-auto bg-gradient-to-r rounded-lg shadow-md p-4">
+    
+    <div className="mx-auto flex flex-col justify-center items-center h-screen main-bg">
+
+      <div className="rounded-sm shadow-md p-4 cardContainer"  >
         {user && (
-          <div className="flex items-center justify-center mb-4">
-            <img src={user.picture.large} alt={user.name.first} className="w-64 h-64 rounded-full" />
+          <div className="mb-4 p-5">
+            <img src={user.picture.large} alt={user.name.first} className="w-50 h-80 image" />
           </div>
         )}
-        {user && (
-          <div className="text-center text-white">
-            <h2 className="text-2xl font-bold">{user.name.first} {user.name.last}</h2>
-            <p className="text-gray-300">{user.gender}</p>
-            <p className="text-gray-300">{user.phone}</p>
+        {user && ( 
+         <div className="main-container">
+            <div className="text-center text-black p-5">
+            <div className="flex">
+            <h1 className="font-bold p-3 heading">{user.name.first} </h1>
+            <h1 className="font-bold p-3 heading"> {user.name.last}</h1>
+            </div>
+
+            <h4 className="para">{user.gender}</h4>
+            <h4 className="para">{user.phone}</h4>
+            </div>
           </div>
         )}
       </div>
