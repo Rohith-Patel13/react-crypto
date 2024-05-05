@@ -23,7 +23,7 @@ const Card = () => {
 
       <div className="rounded-sm shadow-md p-4 cardContainer"  >
         {user && (
-          <div className="mb-4 p-5">
+          <div className="mb-4 p-5 flex justify-center items-center">
             <img src={user.picture.large} alt={user.name.first} className="w-50 h-80 image" />
           </div>
         )}
@@ -46,3 +46,4 @@ const Card = () => {
 };
 
 export default Card
+
